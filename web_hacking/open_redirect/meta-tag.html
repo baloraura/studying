@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="20; url=https://www.google.com"/>
+    <title>Meta Tag Redirect</title>
+</head>
+<body>
+    <p>Will redirect in <span id="number">20</span> seconds</p>
+    
+    
+    <script>
+        let numText = document.getElementById('number');
+        let number = Number(numText.textContent);
+        const interval = setInterval(() => {
+            number--;
+            numText.innerHTML = `${number}`;
+        }, 1000);
+    </script>
+</body>
+</html>
